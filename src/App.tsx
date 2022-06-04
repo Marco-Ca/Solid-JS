@@ -1,4 +1,6 @@
 import { createSignal, batch, For } from "solid-js";
+
+import Button from './components/Button';
 import { createLocalStore, removeIndex } from "./utils";
 
 type TodoItem = { title: string; done: boolean };
@@ -44,9 +46,7 @@ const App = () => {
               value={todo.title}
               onChange={(e) => setTodos(i(), "title", e.currentTarget.value)}
             />
-            <button onClick={() => setTodos((t) => removeIndex(t, i()))}>
-              x
-            </button>
+            <Button onClick={() => setTodos((t) => removeIndex(t, i()))} />
           </div>
         )}
       </For>
