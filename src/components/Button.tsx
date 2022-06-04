@@ -5,7 +5,7 @@ type ButtonType = {
 const Button = ({ onClick }: ButtonType) => {
   return (
     <button onClick={onClick}>
-      x
+      X
     </button>
   )
 }
